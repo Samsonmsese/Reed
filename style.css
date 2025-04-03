@@ -23,7 +23,7 @@ body {
 .announcement-bar {
   background-color: #fff;
   border-bottom: 1px solid #ddd;
-  padding: 0.3rem 1;
+  padding: 0.3rem 1rem;
   font-size: 0.85rem;
   font-weight: 500;
   position: fixed;
@@ -65,7 +65,7 @@ body {
 /* Hero (Desktop) */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,7 +73,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 70px;
+  padding-top: 48px;
   z-index: 0;
 }
 
@@ -173,7 +173,7 @@ footer {
 }
 
 .announcement-spacer {
-  height: 48px;
+  height: 110px;
 }
 
 /* Scroll to Top Button */
