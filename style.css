@@ -63,7 +63,7 @@
     display: flex;
     align-items: flex-start; /* Align content near the top */
     justify-content: center;
-    background-image: url('office-bg.jpg'); /* Use your image path */
+    background-image: url('images/office-bg.jpg'); /* Use your image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
