@@ -326,13 +326,12 @@
 
   /* Hero Fix */
   .hero {
-    height: auto; /* Match height to image size */
-    aspect-ratio: 3 / 4; /* Maintain natural image aspect ratio */
-    background-size: contain;
+    height: auto; /* Adjust height to natural image */
+    background-size: contain; /* Show full image */
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center top;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     text-align: center;
     position: relative;
@@ -340,7 +339,10 @@
   }
 
   .hero::before {
-    background-color: rgba(0, 0, 0, 0.4);
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   .hero .container {
@@ -447,6 +449,7 @@
     flex-direction: column;
     gap: 0.5rem;
   }
+}
 }
 
 
