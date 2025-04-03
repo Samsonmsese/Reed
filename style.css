@@ -326,17 +326,20 @@
 
   /* Hero Fix */
   .hero {
-    height: auto; /* Adjust height to natural image */
-    background-size: contain; /* Show full image */
-    background-repeat: no-repeat;
-    background-position: center top;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    padding: 2rem 1rem;
-  }
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center top;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
 
   .hero::before {
     content: "";
@@ -431,6 +434,24 @@
 }
 
 @media (max-width: 480px) {
+
+    /* Hero Section (mobile fix: match image height) */
+.hero {
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center top;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+
   .hero h1 {
     font-size: 1.5rem;
   }
