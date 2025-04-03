@@ -326,10 +326,9 @@
 
   /* Hero Fix */
   .hero {
-    min-height: 100vh; /* Full screen height */
-    padding: 0;
-    margin: 0;
-    background-size: contain; /* Show full image without cropping */
+    height: auto; /* Match height to image size */
+    aspect-ratio: 3 / 4; /* Maintain natural image aspect ratio */
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     display: flex;
@@ -337,16 +336,16 @@
     justify-content: center;
     text-align: center;
     position: relative;
+    padding: 2rem 1rem;
   }
 
   .hero::before {
-    background-color: rgba(0, 0, 0, 0.4); /* Optional: overlay */
+    background-color: rgba(0, 0, 0, 0.4);
   }
 
   .hero .container {
     position: relative;
     z-index: 2;
-    padding: 1rem;
   }
 
   .hero h1 {
