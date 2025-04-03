@@ -319,16 +319,15 @@ footer {
     font-size: 0.75rem;
   }
 
-  .hero {
+ .hero {
   background-image: url('images/office-bg.jpg');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center top;
   background-color: #ccc;
   width: 100%;
   height: auto;
-  min-height: 400px; /* Adjust as needed */
-  padding-top: 4rem;
+  padding-top: 70px; /* 👈 This line is the key fix */
   padding-bottom: 2rem;
   display: flex;
   align-items: flex-end;
@@ -336,6 +335,7 @@ footer {
   text-align: center;
   position: relative;
 }
+
 
 .hero::before {
   content: "";
