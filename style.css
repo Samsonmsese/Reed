@@ -1,6 +1,5 @@
-/* ---------------------------- */
-/* ✅ BASE STYLES (Desktop First) */
-/* ---------------------------- */
+
+/* BASE STYLES (Desktop First) */
 * {
   box-sizing: border-box;
 }
@@ -67,7 +66,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 100px;
+  padding-top: 70px;
   z-index: 0;
 }
 
@@ -297,9 +296,7 @@ footer {
   color: #333;
 }
 
-/* ---------------------------- */
 /* ✅ CLEAN MOBILE REFINEMENT  */
-/* ---------------------------- */
 @media (max-width: 768px) {
   .container {
     padding: 1.2rem;
@@ -329,6 +326,7 @@ footer {
   height: auto;
   padding-top: 70px; /* 👈 This line is the key fix */
   padding-bottom: 2rem;
+   padding-top: 70px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -374,6 +372,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 70px;
     padding: 2rem 1rem;
     text-align: center;
     position: relative;
