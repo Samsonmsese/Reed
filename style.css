@@ -1,5 +1,7 @@
 
+
 /* BASE STYLES (Desktop First) */
+
 * {
   box-sizing: border-box;
 }
@@ -21,7 +23,7 @@ body {
 .announcement-bar {
   background-color: #fff;
   border-bottom: 1px solid #ddd;
-  padding: 0.4rem 0;
+  padding: 0.3rem 1;
   font-size: 0.85rem;
   font-weight: 500;
   position: fixed;
@@ -43,7 +45,7 @@ body {
   background-color: transparent;
   color: #02754e;
   border: 1px solid #02754e;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 0.75rem;
   border-radius: 5px;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -54,6 +56,11 @@ body {
   background-color: #02754e;
   color: white;
 }
+
+.announcement-spacer {
+  height: 40px; /* 👈 Match or slightly exceed your new bar height */
+}
+
 
 /* Hero (Desktop) */
 .hero {
@@ -296,7 +303,8 @@ footer {
   color: #333;
 }
 
-/* ✅ CLEAN MOBILE REFINEMENT  */
+
+/* CLEAN MOBILE REFINEMENT  */
 @media (max-width: 768px) {
   .container {
     padding: 1.2rem;
@@ -326,7 +334,6 @@ footer {
   height: auto;
   padding-top: 70px; /* 👈 This line is the key fix */
   padding-bottom: 2rem;
-   padding-top: 70px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -372,8 +379,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 70px;
     padding: 2rem 1rem;
+    padding-top: 70px;
     text-align: center;
     position: relative;
   }
