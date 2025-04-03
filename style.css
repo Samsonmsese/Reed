@@ -327,9 +327,20 @@
   /* Hero Fix */
   .hero {
     padding: 3rem 1rem;
-    height: auto;
+    height: 60vh; /* Shrink hero on mobile */
     align-items: center;
+    justify-content: center;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero .container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .hero h1 {
