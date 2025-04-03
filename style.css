@@ -12,10 +12,18 @@ body {
   background: #ffffff;
   color: #222;
   line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .container {
   max-width: 900px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -307,7 +315,7 @@ footer {
 /* CLEAN MOBILE REFINEMENT  */
 @media (max-width: 768px) {
   .container {
-    padding: 1.2rem;
+    padding: 1rem;
   }
 
   .announcement-bar {
@@ -332,6 +340,7 @@ footer {
   background-color: #ccc;
   width: 100%;
   height: auto;
+  padding: 1.5rem 1rem;
   padding-top: 70px; /* 👈 This line is the key fix */
   padding-bottom: 2rem;
   display: flex;
@@ -365,6 +374,10 @@ footer {
   .hero p {
     font-size: 1rem;
   }
+
+  .stats .container {
+  flex-direction: column;
+}
 }
 
 @media (max-width: 480px) {
@@ -375,11 +388,11 @@ footer {
     background-position: center top;
     background-color: #ccc;
     width: 100%;
-    height: 100vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
     padding-top: 70px;
     text-align: center;
     position: relative;
@@ -395,6 +408,7 @@ footer {
 
   .hero .container {
     position: relative;
+     padding: 1rem;
     z-index: 2;
     height: auto;
   }
