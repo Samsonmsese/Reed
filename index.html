@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- AOS Library -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reed Bi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<!-- Page Loader -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+  </div>
+  
+<body>
+
+<!-- Top Announcement Bar -->
+<div class="announcement-bar">
+    <div class="container announcement-content">
+      <span><strong>GoDaddy</strong> — Create professional logos quickly with AI and no design skills needed.</span>
+      <a
+      href="https://www.godaddy.com/en-ph/logo-maker?property%3Apublisher_website_key=wam.md5.71fab3ca3003de1beb11352778044350&omsId=baseline&psName=WAM_BANNER_V1"
+      class="btn-small"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Start Creating
+    </a>
+    
+    </div>
+  </div>
+  
+  <!-- Spacer for fixed announcement bar -->
+<div class="announcement-spacer"></div>
+
+  <!-- Hero Section -->
+  <section class="hero" data-aos="fade-up">
+    <div class="container">
+
+      <h1></h1>
+      <p></p>
+    </div>
+  </section>
+  
+
+  <!-- About Section -->
+<section class="about" data-aos="fade-right">
+    <div class="container">
+      <h2>About Reed Bi</h2>
+      <p>
+        Reed Bi is a forward-thinking biotech company focused on developing cutting-edge solutions in health and life sciences.
+        We combine science, innovation, and collaboration to address the most challenging problems in the industry today.
+      </p>
+    </div>
+  </section>  
+
+  <!-- Stats Section -->
+<section class="stats">
+    <div class="container">
+      <div class="stat-box" data-aos="zoom-in">
+        <h3 class="counter" data-target="120">0</h3>
+        <p>Projects Completed</p>
+      </div>
+      <div class="stat-box" data-aos="zoom-in">
+        <h3 class="counter" data-target="300">0</h3>
+        <p>Happy Clients</p>
+      </div>
+      <div class="stat-box" data-aos="zoom-in">
+        <h3 class="counter" data-target="15">0</h3>
+        <p>Years of Experience</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Contact Section -->
+  <section class="contact" data-aos="fade-left">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form action="https://formspree.io/f/your-id" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Reed Bi. All rights reserved.</p>
+    </div>
+  </footer>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" title="Go to top">↑</button>
+
+<script>
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+  
+    window.addEventListener("scroll", () => {
+      scrollBtn.style.display = window.scrollY > 200 ? "block" : "none";
+    });
+  
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+  
+  <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+
+<script>
+    window.addEventListener("load", function () {
+      document.getElementById("loader-wrapper").style.display = "none";
+    });
+  </script>
+  
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+      counter.innerText = '0';
+      const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const current = +counter.innerText;
+        const increment = target / 100;
+  
+        if (current < target) {
+          counter.innerText = `${Math.ceil(current + increment)}`;
+          setTimeout(updateCounter, 30);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCounter();
+    });
+  </script>
+  
+  <!-- Cookie Consent Bottom-Right -->
+<div class="cookie-consent-box" id="cookieConsentBox">
+    <p>
+      We use cookies to improve your experience. Choose your preferences below.
+    </p>
+    <div class="cookie-btns">
+      <button class="accept-btn">Accept</button>
+      <button class="reject-btn">Reject</button>
+      <button class="manage-btn">Manage</button>
+    </div>
+  </div>
+  
+  <script>
+    const cookieBox = document.getElementById("cookieConsentBox");
+    const acceptBtn = document.querySelector(".accept-btn");
+    const rejectBtn = document.querySelector(".reject-btn");
+    const manageBtn = document.querySelector(".manage-btn");
+  
+    if (!localStorage.getItem("cookieChoice")) {
+      cookieBox.style.display = "block";
+    }
+  
+    acceptBtn.addEventListener("click", () => {
+      localStorage.setItem("cookieChoice", "accepted");
+      cookieBox.style.display = "none";
+    });
+  
+    rejectBtn.addEventListener("click", () => {
+      localStorage.setItem("cookieChoice", "rejected");
+      cookieBox.style.display = "none";
+    });
+  
+    manageBtn.addEventListener("click", () => {
+      alert("You clicked Manage Preferences (this could open a settings modal).");
+    });
+  </script>
+  
+  
+</body>
+
+</html>
