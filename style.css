@@ -315,65 +315,92 @@ footer {
 /* CLEAN MOBILE REFINEMENT  */
 @media (max-width: 768px) {
   .container {
-    padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
   }
-
   .announcement-bar {
-    font-size: 0.75rem;
-    padding: 0.3rem 1rem;
-  }
-
-  .announcement-spacer {
-    height: 150px;
-  }
-
-  .btn-small {
-    padding: 0.3rem 0.8rem;
-    font-size: 0.75rem;
-  }
-
- .hero {
-  background-image: url('images/office-bg.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-color: #ccc;
+  background-color: #ebe4e4;
+  border-bottom: 1px solid #ddd;
+  padding: 0.2rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  padding: 1.5rem 1rem;
-  padding-top: 48px; /* 👈 This line is the key fix */
-  padding-bottom: 2rem;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  text-align: center;
-  position: relative;
+  z-index: 1000;
 }
 
+.announcement-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-small {
+  background-color: transparent;
+  color: #02754e;
+  border: 1px solid #02754e;
+  padding: 0.3rem 0.75rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.btn-small:hover {
+  background-color: #02754e;
+  color: white;
+}
+
+.announcement-spacer {
+  height: 40px; /* 👈 Match or slightly exceed your new bar height */
+}
+
+.hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('images/office-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 48px;
+  z-index: 0;
+}
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.3); /* Optional overlay */
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 
 .hero .container {
   position: relative;
   z-index: 2;
-  height: auto;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
 
-  .hero h1 {
-    font-size: 1.75rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
+.hero p {
+  font-size: 1.1rem;
+  color: #eee;
+}
 
   .stats .container {
   flex-direction: column;
@@ -381,60 +408,97 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .hero {
-    background-image: url('images/office-bg.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-color: #ccc;
-    width: 100%;
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem 1rem;
-    padding-top: 48px;
-    text-align: center;
-    position: relative;
+  .container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
   }
-
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-
-  .hero .container {
-    position: relative;
-     padding: 1rem;
-    z-index: 2;
-    height: auto;
-  }
-
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero p {
-    font-size: 0.9rem;
-  }
-
   .announcement-bar {
-    font-size: 0.75rem;
-    padding: 0.3rem 1rem;
-  }
+  background-color: #ebe4e4;
+  border-bottom: 1px solid #ddd;
+  padding: 0.2rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
 
-  .announcement-spacer {
-    height: 150px;
-  }
+.announcement-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 
-  .btn-small,
-  button,
-  .btn-primary {
-    font-size: 0.9rem;
-  }
+.btn-small {
+  background-color: transparent;
+  color: #02754e;
+  border: 1px solid #02754e;
+  padding: 0.3rem 0.75rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.btn-small:hover {
+  background-color: #02754e;
+  color: white;
+}
+
+.announcement-spacer {
+  height: 40px; /* 👈 Match or slightly exceed your new bar height */
+}
+
+.hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('images/office-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 48px;
+  z-index: 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #eee;
+}
+
+  .stats .container {
+  flex-direction: column;
+}
 
   .cookie-btns {
     flex-direction: column;
