@@ -9,21 +9,21 @@
   <title>Reed Bi</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-</head>
 
-<!-- Open Graph Meta Tags -->
+  <!-- Open Graph (for Facebook, WhatsApp, LinkedIn) -->
 <meta property="og:title" content="Reed Bi">
 <meta property="og:description" content="Innovative Solutions for Everyone.">
-<meta property="og:image" content="https://samsonmsese.github.io/Reed/office-bg.jpg">
-<meta property="og:url" content="https://samsonmsese.github.io/Reed">
+<meta property="og:image" content="https://yourdomain.com/images/office-preview.jpg">
+<meta property="og:url" content="https://yourdomain.com">
 <meta property="og:type" content="website">
 
-<!-- Twitter Card Meta -->
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Reed Bi">
 <meta name="twitter:description" content="Innovative Solutions for Everyone.">
-<meta name="twitter:image" content="https://samsonmsese.github.io/Reed/office-bg.jpg">
+<meta name="twitter:image" content="https://yourdomain.com/images/office-preview.jpg">
 
+</head>
 
 <!-- Page Loader -->
 <div id="loader-wrapper">
@@ -34,20 +34,51 @@
 
 <!-- Top Announcement Bar -->
 <div class="announcement-bar">
-    <div class="container announcement-content">
-      <span><strong>GoDaddy</strong> — Create professional logos quickly with AI and no design skills needed.</span>
-      <a
-      href="https://www.godaddy.com/en-ph/logo-maker?property%3Apublisher_website_key=wam.md5.71fab3ca3003de1beb11352778044350&omsId=baseline&psName=WAM_BANNER_V1"
-      class="btn-small"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Start Creating
-    </a>
-    
+  <div class="container announcement-content">
+    <div class="announcement-rotator">
+      <!-- First announcement -->
+      <div class="announcement-item active">
+        <span><strong>GoDaddy</strong> — Create professional logos quickly with AI and no design skills needed.</span>
+        <a
+          href="https://www.godaddy.com/en-ph/logo-maker"
+          class="btn-small"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Start Creating
+        </a>
+      </div>
+
+      <!-- Second announcement -->
+      <div class="announcement-item">
+        <span>🌍 Expand your business online with free tools from GoDaddy.</span>
+        <a
+          href="https://www.godaddy.com/websites/online-store"
+          class="btn-small"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore Tools
+        </a>
+      </div>
+
+      <!-- Third announcement -->
+      <div class="announcement-item">
+        <span>✨ Trusted by millions of users worldwide — Start today!</span>
+        <a
+          href="https://www.godaddy.com"
+          class="btn-small"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get Started
+        </a>
+      </div>
     </div>
   </div>
-  
+</div>
+
+
   <!-- Spacer for fixed announcement bar -->
 <div class="announcement-spacer"></div>
 
@@ -198,6 +229,18 @@
       alert("You clicked Manage Preferences (this could open a settings modal).");
     });
   </script>
+  
+  <script>
+    const items = document.querySelectorAll('.announcement-item');
+    let index = 0;
+  
+    setInterval(() => {
+      items[index].classList.remove('active');
+      index = (index + 1) % items.length;
+      items[index].classList.add('active');
+    }, 3000);
+  </script>
+  
   
   
 </body>
