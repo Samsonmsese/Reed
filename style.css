@@ -41,6 +41,30 @@ img {
   z-index: 1000;
 }
 
+.announcement-rotator {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.announcement-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.announcement-item.active {
+  opacity: 1;
+  position: relative; /* override absolute when active */
+}
+
+
 .announcement-content {
   display: flex;
   align-items: center;
