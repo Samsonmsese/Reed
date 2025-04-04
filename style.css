@@ -324,7 +324,7 @@ footer {
   }
 
   .announcement-spacer {
-    height: 210px;
+    height: 150px;
   }
 
   .btn-small {
@@ -421,8 +421,13 @@ footer {
     font-size: 0.9rem;
   }
 
+  .announcement-bar {
+    font-size: 0.75rem;
+    padding: 0.3rem 1rem;
+  }
+
   .announcement-spacer {
-    height: 210px;
+    height: 150px;
   }
 
   .btn-small,
