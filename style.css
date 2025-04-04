@@ -320,11 +320,11 @@ footer {
 
   .announcement-bar {
     font-size: 0.75rem;
-    padding: 0.4rem 1rem;
+    padding: 0.3rem 1rem;
   }
 
   .announcement-spacer {
-    height: 40px;
+    height: 110px;
   }
 
   .btn-small {
@@ -341,7 +341,7 @@ footer {
   width: 100%;
   height: auto;
   padding: 1.5rem 1rem;
-  padding-top: 70px; /* 👈 This line is the key fix */
+  padding-top: 48px; /* 👈 This line is the key fix */
   padding-bottom: 2rem;
   display: flex;
   align-items: flex-end;
@@ -393,7 +393,7 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 1.5rem 1rem;
-    padding-top: 70px;
+    padding-top: 48px;
     text-align: center;
     position: relative;
   }
