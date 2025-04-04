@@ -324,7 +324,7 @@ footer {
   }
 
   .announcement-spacer {
-    height: 110px;
+    height: 210px;
   }
 
   .btn-small {
@@ -419,6 +419,10 @@ footer {
 
   .hero p {
     font-size: 0.9rem;
+  }
+
+  .announcement-spacer {
+    height: 210px;
   }
 
   .btn-small,
